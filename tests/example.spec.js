@@ -13,18 +13,18 @@ test('get started', async ({ page }) => {
   await expect(main).toHaveClass('main')
 })
 
-test('check request and response', async () => {
-  const browser = await chromium.launch()
-  const page = await browser.newPage()
+// test('check request and response', async () => {
+//   const browser = await chromium.launch()
+//   const page = await browser.newPage()
 
-  // Subscribe to 'request' and 'response' events.
-  page.on('request', (request) =>
-    console.log('>>', request.method(), request.url()),
-  )
-  page.on('response', (response) =>
-    console.log('<<', response.status(), response.url()),
-  )
-  // await page.goto('http://localhost:3000/')
+//   // Subscribe to 'request' and 'response' events.
+//   page.on('request', (request) =>
+//     console.log('>>', request.method(), request.url()),
+//   )
+//   page.on('response', (response) =>
+//     console.log('<<', response.status(), response.url()),
+//   )
+//   // await page.goto('http://localhost:3000/')
 
-  await browser.close()
-})
+//   await browser.close()
+// })
