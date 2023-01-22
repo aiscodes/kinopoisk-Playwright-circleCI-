@@ -26,7 +26,8 @@ jobs:
       - node/install-packages:
           # If you are using yarn, change the line below from "npm" to "yarn"
           pkg-manager: npm
-      - install:
+      - run:
+          name: Install tests
           command: npx playwright install
       - run:
           name: Run tests
