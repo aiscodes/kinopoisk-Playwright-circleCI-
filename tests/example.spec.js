@@ -24,7 +24,7 @@ test('check request and response', async () => {
   page.on('response', (response) =>
     console.log('<<', response.status(), response.url()),
   )
-  await page.goto('http://localhost:3000/')
+  // await page.goto('http://localhost:3000/')
 
   await browser.close()
 })
