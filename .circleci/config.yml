@@ -28,7 +28,7 @@ jobs:
           pkg-manager: npm
       - run:
           name: Install tests
-          command: sudo npx playwright install-deps
+          command: npx playwright install
       - run:
           name: Run tests
           command: npx playwright test
